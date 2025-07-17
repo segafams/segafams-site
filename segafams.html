@@ -78,13 +78,18 @@
 
     .btn-join {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px;
       background: #ffcc00;
       color: #000;
       padding: 12px 24px;
       border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-join:hover {
+      background: #e6b800;
     }
 
     .section {
@@ -116,33 +121,9 @@
       opacity: 0.9;
     }
 
-    .link-section {
-      max-width: 900px;
-      margin: 40px auto 60px;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 15px;
+    .button-links {
       text-align: center;
-    }
-
-    .link-section h3 {
-      margin-bottom: 20px;
-    }
-
-    .link-buttons a {
-      margin: 10px;
-      display: inline-block;
-      background: #ffcc00;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .link-buttons a:hover {
-      background: #e6b800;
+      margin-top: 40px;
     }
 
     footer {
@@ -208,15 +189,14 @@
       <p>4,7M subscriber</p>
     </a>
   </div>
-</section>
 
-<!-- Kotak tambahan untuk link ke website lain -->
-<section class="link-section">
-  <h3>Kunjungi Website Lain</h3>
-  <div class="link-buttons">
-    <a href="https://example.com">Website Partner 1</a>
-    <a href="https://example2.com">Website Partner 2</a>
-    <a href="https://example3.com">Forum Fans</a>
+  <!-- ✅ Tombol tambahan -->
+  <div class="button-links">
+    <h3>Kunjungi Halaman Lain & Sosial Media</h3>
+    <a href="https://contohwebsite.com" target="_blank" class="btn-join">Website Resmi</a>
+    <a href="https://instagram.com/segafams" target="_blank" class="btn-join">Instagram</a>
+    <a href="https://www.youtube.com/@Segafams" target="_blank" class="btn-join">YouTube</a>
+    <a href="https://discord.com/invite/segafams" target="_blank" class="btn-join">Discord</a>
   </div>
 </section>
 
