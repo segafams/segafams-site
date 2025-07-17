@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Segafams Official</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f0f2b;
+            color: #fff;
+        }
+
+        header {
+            background: #00001a;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #00001a;
+            padding: 20px;
+            text-align: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SEGAFAMS</h1>
+    <nav>
+        <a href="segafams.html">Home</a>
+        <a href="sega.html">Sosmed</a>
+        <!-- <a href="event.html">Event</a> -->
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+</header>
+
+<h2>Galeri Komunitas</h2>
+
+<div class="gallery">
+    <a href="avatar1.png" target="_blank">
+        <img src="avatar1.png" alt="Foto 1">
+    </a>
+    <a href="avatar2.png" target="_blank">
+        <img src="avatar2.png" alt="Foto 2">
+    </a>
+    <a href="avatar3.png" target="_blank">
+        <img src="avatar3.png" alt="Foto 3">
+    </a>
+    <a href="avatar4.png" target="_blank">
+        <img src="avatar4.png" alt="Foto 4">
+    </a>
+    <a href="galeri5.jpg" target="_blank">
+        <img src="galeri5.jpg" alt="Foto 5">
+    </a>
+    <a href="galeri6.jpg" target="_blank">
+        <img src="galeri6.jpg" alt="Foto 6">
+    </a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Segafams. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
