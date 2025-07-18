@@ -7,19 +7,19 @@
     <link rel="icon" href="logo_sega.jpg" type="image/png">
     <style>
         body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #43e30e, #c5171d, #1010cf, #bbd116);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
-    color: #fff;
-}
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #43e30e, #c5171d, #1010cf, #bbd116);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #fff;
+        }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
         header {
             display: flex;
@@ -94,6 +94,14 @@
             border-radius: 10px;
             padding: 15px;
             text-align: center;
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .youtuber-card:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
         .youtuber-card img {
             width: 60px;
@@ -114,57 +122,35 @@
             font-size: 18px;
             text-decoration: none;
         }
-        .card-1 {
-            background-color: #0fd326;
-        }
+        .card-1 { background-color: #0fd326; }
+        .card-2 { background-color: #df1e1e; }
+        .card-3 { background-color: #134fd1; }
+        .card-4 { background-color: #c2d613; }
 
-        .card-2 {
-            background-color: #df1e1e;
-        }
-
-        .card-3 {
-            background-color: #134fd1;  
-        }
-
-        .card-4 {
-            background-color: #c2d613;
-        }
         .bembi-container {
-        text-align: center;
-        margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
 
         .btn-bembi {
-        background-color: #ffcc00;
-        color: #000;
-        padding: 8px 18px;
-        font-size: 14px;
-        border-radius: 8px;
-        font-weight: bold;
-        text-decoration: none;
-        transition: background 0.3s;
-        display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 8px 18px;
+            font-size: 14px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
         }
 
         .btn-bembi:hover {
-        background-color: #e0b700;
+            background-color: #e0b700;
         }
-
-        .youtuber-card {
-            display: block;
-            text-decoration: none;
-            color: #fff;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .youtuber-card:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
-
     </style>
 </head>
 <body>
@@ -174,9 +160,8 @@
     <nav>
         <a href="segafams.html">Home</a>
         <a href="sega.html">Sosmed</a>
-        <!-- <a href="event.html">Event</a> -->
         <a href="galeri.html">Galeri</a>
-        <a href="kontak.html">kontak</a>
+        <a href="kontak.html">Kontak</a>
     </nav>
 </header>
 
@@ -189,47 +174,44 @@
     </div>
     <h2>SEGAFAMS OFFICIAL</h2>
     <p>Komunitas Para Fans Tim Kaciw</p>
-    <!-- <a href="#" class="btn-join">Ikuti Event Komunitas</a> -->
 </section>
 
 <section class="section">
     <h3 style="text-align:center;">YOUTUBER</h3>
-   <div class="youtuber-list">
+    <div class="youtuber-list">
 
-   <a href="https://www.youtube.com/@MrSonalibaba" target="_blank" class="youtuber-card card-1">
-        <img src="avatar1.png" alt="Sonalibaba">
-        <h4>Sonalibaba</h4>
-        <p>553K subscriber</p>
-    </a>
+        <a href="https://www.youtube.com/@MrSonalibaba" target="_blank" class="youtuber-card card-1">
+            <img src="avatar1.png" alt="Sonalibaba">
+            <h4>Sonalibaba</h4>
+            <p>553K subscriber</p>
+        </a>
 
-    <a href="https://www.youtube.com/@Epun7" target="_blank" class="youtuber-card card-2">
-        <img src="avatar2.png" alt="Epun">
-        <h4>Epun</h4>
-        <p>346K subscriber</p>
-    </a>
+        <a href="https://www.youtube.com/@Epun7" target="_blank" class="youtuber-card card-2">
+            <img src="avatar2.png" alt="Epun">
+            <h4>Epun</h4>
+            <p>346K subscriber</p>
+        </a>
 
-    <a href="https://www.youtube.com/@GOGOGOY" target="_blank" class="youtuber-card card-3">
-        <img src="avatar3.png" alt="Igoy">
-        <h4>Gogogoy</h4>
-        <p>1,15M subscriber</p>
-    </a>
+        <a href="https://www.youtube.com/@GOGOGOY" target="_blank" class="youtuber-card card-3">
+            <img src="avatar3.png" alt="Igoy">
+            <h4>Gogogoy</h4>
+            <p>1,15M subscriber</p>
+        </a>
 
-    <a href="https://www.youtube.com/@AfifYulistian" target="_blank" class="youtuber-card card-4">
-        <img src="avatar4.png" alt="Apip">
-        <h4>Afif Yulistian</h4>
-        <p>4,7M subscriber</p>
-    </a>
+        <a href="https://www.youtube.com/@AfifYulistian" target="_blank" class="youtuber-card card-4">
+            <img src="avatar4.png" alt="Apip">
+            <h4>Afif Yulistian</h4>
+            <p>4,7M subscriber</p>
+        </a>
 
-</div>
+    </div>
 
-<!-- Tombol Bembi TopUp -->
-<div class="bembi-container">
-    <a href="Alison Sosmed.html" target="_blank" class="btn-bembi">All Sosmed Alison</a>
-    <a href="https://bembitopup.com/" target="_blank" class="btn-bembi">All Sosmed Epun</a>
-    <a href="https://bembitopup.com/" target="_blank" class="btn-bembi">All Sosmed Igoy</a>
-    <a href="https://bembitopup.com/" target="_blank" class="btn-bembi">All Sosmed Apiip</a>
-</div>
-
+    <div class="bembi-container">
+        <a href="Alison Sosmed.html" target="_blank" class="btn-bembi">All Sosmed Alison</a>
+        <a href="https://bembitopup.com/" target="_blank" class="btn-bembi">All Sosmed Epun</a>
+        <a href="https://bembitopup.com/" target="_blank" class="btn-bembi">All Sosmed Igoy</a>
+        <a href="https://bembitopup.com/" target="_blank" class="btn-bembi">All Sosmed Apiip</a>
+    </div>
 </section>
 
 <footer>
@@ -242,11 +224,12 @@
 </footer>
 
 <script>
-    // JS Sederhana (opsional)
     const btnJoin = document.querySelector('.btn-join');
-    btnJoin.addEventListener('click', () => {
-        alert('Terima kasih telah bergabung!');
-    });
+    if (btnJoin) {
+        btnJoin.addEventListener('click', () => {
+            alert('Terima kasih telah bergabung!');
+        });
+    }
 </script>
 
 </body>
