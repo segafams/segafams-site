@@ -1,222 +1,275 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segafams Official</title>
-    <link rel="icon" href="logo_sega.jpg" type="image/png">
-    <style>
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #43e30e, #c5171d, #1010cf, #bbd116);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
-    color: #fff;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Segafams Official</title>
+  <link rel="icon" href="logo_sega.jpg" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url(blurr.jpg);
+      background-size: cover;
+      color: #fff;
+    }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #00001a;
-        }
-        header h1 {
-            font-size: 24px;
-            color: #fff;
-        }
-        nav a {
-            margin-left: 20px;
-            color: #ccc;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        nav a:hover {
-            color: #fff;
-        }
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .hero h2 {
-            font-size: 40px;
-            margin: 20px 0 10px;
-        }
-        .hero p {
-            font-size: 16px;
-            color: #ccc;
-        }
-        .avatars {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .avatars img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: #fff;
-            padding: 5px;
-        }
-        .btn-join {
-            display: inline-block;
-            margin-top: 20px;
-            background: #ffcc00;
-            color: #000;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .section {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        .youtuber-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .youtuber-card {
-            background: #1c1c3a;
-            border: 2px solid #ff5e00;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-        }
-        .youtuber-card img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        footer {
-            background: #00001a;
-            padding: 20px;
-            text-align: center;
-            color: #aaa;
-            font-size: 14px;
-        }
-        .social-icons a {
-            margin: 0 8px;
-            color: #ffcc00;
-            font-size: 18px;
-            text-decoration: none;
-        }
-        .card-1 {
-            background-color: #0fd326;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #00001a;
+    }
 
-        .card-2 {
-            background-color: #df1e1e;
-        }
+    header h1 {
+      font-size: 24px;
+      color: #fff;
+    }
 
-        .card-3 {
-            background-color: #134fd1;  
-        }
+    nav a {
+      margin-left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-        .card-4 {
-            background-color: #c2d613;
-        }
+    nav a:hover {
+      color: #fff;
+    }
 
-        .youtuber-card {
-            display: block;
-            text-decoration: none;
-            color: #fff;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s, background-color 0.3s;
-        }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-        .youtuber-card:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
+    .hero h2 {
+      font-size: 40px;
+      margin: 20px 0 10px;
+    }
 
-    </style>
+    .hero p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .avatars {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .avatars img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #fff;
+      padding: 5px;
+    }
+
+    .btn-join {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ffcc00;
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .youtuber-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .youtuber-card {
+      background: #1c1c3a;
+      border: 2px solid #ff5e00;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      color: #000000;
+      transition: transform 0.3s, background-color 0.3s;
+      font-size: 12px;
+    }
+
+    .youtuber-card:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .youtuber-card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      border: 2px solid #fff;
+    }
+
+    .youtuber-card h4 {
+      font-size: 12px;
+      margin: 2px 0;
+    }
+
+    .youtuber-card p {
+      font-size: 11px;
+      margin: 2px 0;
+    }
+
+    .label-channel {
+      font-size: 9px;
+      font-weight: bold;
+      color: #000000;
+      margin: 4px 0 2px 0;
+      text-transform: uppercase;
+    }
+
+    .card-1 { background-color: #0fd326; }
+    .card-2 { background-color: #df1e1e; }
+    .card-3 { background-color: #134fd1; }
+    .card-4 { background-color: #c2d613; }
+
+    .bembi-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .btn-bembi {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 8px 18px;
+      font-size: 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .btn-bembi:hover {
+      background-color: #e0b700;
+    }
+
+    footer {
+      background: #00001a;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      color: #ffcc00;
+      font-size: 18px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>SEGAFAMS</h1>
-    <nav>
-        <a href="segafams.html">Home</a>
-        <a href="sega.html">Sosmed</a>
-        <!-- <a href="event.html">Event</a> -->
-        <a href="galeri.html">Galeri</a>
-        <a href="kontak.html">kontak</a>
-    </nav>
+  <h1>SEGAFAMS</h1>
+  <nav>
+    <a href="segafams.html">Kaciw</a>
+    <a href="sega.html">Segafams</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <div class="avatars">
-        <img src="avatar1.png" alt="Youtuber 1">
-        <img src="avatar2.png" alt="Youtuber 2">
-        <img src="avatar3.png" alt="Youtuber 3">
-        <img src="avatar4.png" alt="Youtuber 4">
-    </div>
-    <h2>SEGAFAMS OFFICIAL</h2>
-    <p>Komunitas Para Fans Tim Kaciw</p>
-    <!-- <a href="#" class="btn-join">Ikuti Event Komunitas</a> -->
+  <div class="avatars">
+    <img src="chibi_alison.png" alt="Youtuber 1" />
+    <img src="chibi_epun.png" alt="Youtuber 2" />
+    <img src="chibi_igoy.png" alt="Youtuber 3" />
+    <img src="chibi_apip.png" alt="Youtuber 4" />
+  </div>
+  <h2>SEGAFAMS OFFICIAL</h2>
+  <p>Komunitas Para Fans Tim Kaciw</p>
 </section>
 
 <section class="section">
-    <h3 style="text-align:center;">YOUTUBER</h3>
-    <div class="youtuber-list">
+  <h3 style="text-align:center;">TIM KACIW</h3>
+  <div class="youtuber-list">
+    <a href="https://www.youtube.com/@MrSonalibaba" target="_blank" class="youtuber-card card-1">
+      <p class="label-channel">Channel YouTube</p>
+      <img src="avatar1.png" alt="Sonalibaba" />
+      <h4>Sonalibaba</h4>
+      <p>subscribe now</p>
+    </a>
 
-       <a href="https://www.youtube.com/@MrSonalibaba" target="_blank" class="youtuber-card">
-            <img src="avatar1.png" alt="Sonalibaba">
-            <h4>Sonalibaba</h4>
-            <p>553K subscriber</p>
-        </a>
+    <a href="https://www.youtube.com/@Epun7" target="_blank" class="youtuber-card card-2">
+      <p class="label-channel">Channel YouTube</p>
+      <img src="avatar2.png" alt="Epun" />
+      <h4>Epun</h4>
+      <p>subscribe now</p>
+    </a>
 
-        <a href="https://www.youtube.com/@Epun7" target="_blank" class="youtuber-card">
-            <img src="avatar2.png" alt="Epun">
-            <h4>Epun</h4>
-            <p>346K subscriber</p>
-        </a>
-        
-        <a href="https://www.youtube.com/@GOGOGOY" target="_blank" class="youtuber-card">
-            <img src="avatar3.png" alt="Igoy">
-            <h4>Gogogoy</h4>
-            <p>1,15M subscriber</p>
-        </a>
+    <a href="https://www.youtube.com/@GOGOGOY" target="_blank" class="youtuber-card card-3">
+      <p class="label-channel">Channel YouTube</p>
+      <img src="avatar3.png" alt="Igoy" />
+      <h4>Gogogoy</h4>
+      <p>subscribe now</p>
+    </a>
 
-        <a href="https://www.youtube.com/@AfifYulistian" target="_blank" class="youtuber-card">
-            <img src="avatar4.png" alt="apip">
-            <h4>Afif Yulistian</h4>
-            <p>4,7M subscriber</p>
-        </a>
-    </div>
+    <a href="https://www.youtube.com/@AfifYulistian" target="_blank" class="youtuber-card card-4">
+      <p class="label-channel">Channel YouTube</p>
+      <img src="avatar4.png" alt="Apip" />
+      <h4>Afif Yulistian</h4>
+      <p>subscribe now</p>
+    </a>
+  </div>
+
+  <!-- Tombol Sosmed di bawah kotak YouTuber -->
+  <div class="bembi-container">
+    <a href="Alison Sosmed.html" target="_blank" class="btn-bembi">All Sosmed Alison</a>
+    <a href="Epun Sosmed.html" target="_blank" class="btn-bembi">All Sosmed Epun</a>
+    <a href="Igoy Sosmed.html" target="_blank" class="btn-bembi">All Sosmed Igoy</a>
+    <a href="Apip Sosmed.html" target="_blank" class="btn-bembi">All Sosmed Apiip</a>
+  </div>
 </section>
 
 <footer>
-    <div class="social-icons">
-        <a href="#">Instagram</a>
-        <a href="#">YouTube</a>
-        <a href="#">Discord</a>
-    </div>
-    <p>&copy; 2025 Segafams. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
+    <a href="#">Discord</a>
+  </div>
+  <p>&copy; 2025 Segafams. All rights reserved.</p>
 </footer>
 
 <script>
-    // JS Sederhana (opsional)
-    const btnJoin = document.querySelector('.btn-join');
+  const btnJoin = document.querySelector('.btn-join');
+  if (btnJoin) {
     btnJoin.addEventListener('click', () => {
-        alert('Terima kasih telah bergabung!');
+      alert('Terima kasih telah bergabung!');
     });
+  }
 </script>
 
 </body>
