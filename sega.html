@@ -1,210 +1,204 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEGAFAMS Official</title>
-<link rel="icon" href="logo_sega.jpg" type="image/png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEGAFAMS Official</title>
+  <link rel="icon" href="logo_sega.jpg" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
     body {
-        background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6f61, #ff3b2e);
-        background-size: 400% 400%;
-        animation: gradientBG 12s ease infinite;
-        color: #fff; min-height: 100vh; padding: 20px;
-        display: flex; flex-direction: column; align-items: center;
+      background: url(blurr.jpg);
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      padding-top: 80px; /* Header height */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    @keyframes gradientBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
+
     header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        background: rgba(255,255,255,0.1);
-        border-radius: 12px;
-        backdrop-filter: blur(8px);
-        position: fixed;
-        top: 15px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        max-width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #00001a;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
-    .logo-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+
+    header h1 {
+      font-size: 24px;
+      color: #fff;
+      margin: 0;
     }
-    .logo-title i {
-        font-size: 28px;
-        color: #fff;
+
+    nav a {
+      margin-left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
     }
-    .logo-title h1 {
-        font-size: 20px;
-        font-weight: bold;
+
+    nav a:hover {
+      color: #fff;
     }
-    .avatars {
-        display: flex;
-        gap: 10px;
-    }
-    .avatars img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #fff;
-        transition: transform 0.3s ease;
-    }
-    .avatars img:hover {
-        transform: scale(1.1);
-    }
+
     .intro {
-        margin-top: 120px;
-        text-align: center;
-        max-width: 600px;
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 20px;
     }
+
     .intro h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 10px;
     }
+
     .intro p {
-        font-size: 14px;
-        opacity: 0.9;
-        margin-bottom: 8px;
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 8px;
     }
+
     .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 20px;
-        max-width: 900px;
-        width: 90%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      width: 90%;
     }
+
     .card {
-        background: rgba(255,255,255,0.12);
-        padding: 20px;
-        text-align: center;
-        border-radius: 15px;
-        border: 1px solid rgba(255,255,255,0.3);
-        transition: all 0.3s ease;
-        cursor: pointer;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
+
     .card:hover {
-        transform: scale(1.07);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        background: rgba(255,255,255,0.25);
+      transform: scale(1.07);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.25);
     }
+
     .card i {
-        font-size: 36px;
-        margin-bottom: 8px;
-        display: block;
-        transition: transform 0.3s;
+      font-size: 36px;
+      margin-bottom: 8px;
+      display: block;
+      transition: transform 0.3s;
     }
+
     .card:hover i {
-        transform: rotate(10deg) scale(1.1);
+      transform: rotate(10deg) scale(1.1);
     }
+
     .social-icons {
-        text-align: center;
-        margin-top: 30px;
+      text-align: center;
+      margin-top: 30px;
     }
+
     .social-icons a {
-        margin: 0 8px; font-size: 26px; color: #fff;
-        transition: transform 0.3s;
+      margin: 0 8px;
+      font-size: 26px;
+      color: #fff;
+      transition: transform 0.3s;
     }
-    .social-icons a:hover {transform: scale(1.2);}
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
     footer {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 14px;
-        opacity: 0.8;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.8;
     }
-</style>
+  </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-title">
-        <img src="logo_sega.jpg" alt="Profile" style="width:50px; height:50px; border-radius:50%; border:2px solid #fff; object-fit:cover;">
-        <h1>SEGAFAMS Official</h1>
-    </div>
+  <!-- Header dari code pertama -->
+  <header>
+    <h1>SEGAFAMS</h1>
+    <nav>
+      <a href="segafams.html">Kaciw</a>
+      <a href="sega.html">Segafams</a>
+      <a href="biodata.html">Biodata</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
 
-     <div class="avatars">
-        <img src="avatar1.png" alt="Avatar 1">
-        <img src="avatar2.png" alt="Avatar 2">
-        <img src="avatar3.png" alt="Avatar 3">
-        <img src="avatar4.png" alt="Avatar 4">
-    </div>
-</header>
-</header>
-
-<div class="intro">
+  <div class="intro">
     <h2>Selamat Datang di SEGAFAMS Official</h2>
-    <p>✨  Hi guys! This is our platform  ✨</p>
-    <p>lupa follow semua sosmed SEGAFAMS serta nyalakan loncengnya agar tidak ketinggalan info dari kita ya</p>
-</div>
+    <p>✨ Hi guys! This is our platform ✨</p>
+    <p>Jangan lupa follow semua sosmed SEGAFAMS dan aktifkan notifikasi agar tidak ketinggalan info!</p>
+  </div>
 
-<div class="grid-container">
+  <div class="grid-container">
     <div class="card" onclick="openLink('https://discord.com/invite/e6vzchHtzD')">
-        <i class="fa-brands fa-discord"></i>
-        <div>Join Discord</div>
+      <i class="fa-brands fa-discord"></i>
+      <div>Join Discord</div>
     </div>
     <div class="card" onclick="openLink('https://www.instagram.com/segafams_official')">
-        <i class="fa-brands fa-instagram"></i>
-        <div>Instagram</div>
+      <i class="fa-brands fa-instagram"></i>
+      <div>Instagram</div>
     </div>
     <div class="card" onclick="openLink('https://www.tiktok.com/@timkaciw_fanbase01')">
-        <i class="fa-brands fa-tiktok"></i>
-        <div>TikTok</div>
+      <i class="fa-brands fa-tiktok"></i>
+      <div>TikTok</div>
     </div>
     <div class="card" onclick="openLink('https://www.youtube.com/@segafamsofficial?sub_confirmation=1')">
-        <i class="fa-brands fa-youtube"></i>
-        <div>YouTube</div>
+      <i class="fa-brands fa-youtube"></i>
+      <div>YouTube</div>
     </div>
     <div class="card" onclick="openLink('https://www.pinterest.com/segafams')">
-        <i class="fa-brands fa-pinterest"></i>
-        <div>Pinterest</div>
+      <i class="fa-brands fa-pinterest"></i>
+      <div>Pinterest</div>
     </div>
     <div class="card" onclick="openLink('https://www.instagram.com/j/AbYyRClQKGvTvWfv/')">
-        <i class="fa-brands fa-instagram"></i>
-        <div>SEGAFAMS</div>
+      <i class="fa-brands fa-instagram"></i>
+      <div>SEGAFAMS</div>
     </div>
     <div class="card" onclick="openLink('https://www.whatsapp.com/channel/0029Vb6XG2q5vKA91OvQlo3w')">
-        <i class="fa-brands fa-whatsapp"></i>
-        <div>SEGAFAMS💙</div>
+      <i class="fa-brands fa-whatsapp"></i>
+      <div>SEGAFAMS💙</div>
     </div>
-</div>
+  </div>
 
-<div class="social-icons">
+  <div class="social-icons">
     <a href="https://www.instagram.com/segafams_official" target="_blank"><i class="fa-brands fa-instagram"></i></a>
     <a href="https://discord.com/invite/e6vzchHtzD" target="_blank"><i class="fa-brands fa-discord"></i></a>
     <a href="https://www.youtube.com/@segafamsofficial?sub_confirmation=1" target="_blank"><i class="fa-brands fa-youtube"></i></a>
     <a href="https://www.tiktok.com/@timkaciw_fanbase01" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-</div>
+  </div>
 
-   <script>
-  function goBack() {
-    window.history.back();
-  }
-</script>
-   
-   <div style="text-align: center; margin-top: 30px;">
-  <button onclick="goBack()" style="padding: 10px 20px; font-size: 14px; background-color: #ffcc00; color: #000; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
-    ← Kembali
-  </button>
-</div>
-
-<footer>
+  <footer>
     <p>&copy; 2025 SEGAFAMS Official | All Rights Reserved</p>
-</footer>
+  </footer>
 
-<script>
-    function openLink(url){window.open(url,'_blank');}
-</script>
+  <script>
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+  </script>
 
 </body>
 </html>
