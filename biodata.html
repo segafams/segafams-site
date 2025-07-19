@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Segafams Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      min-height: 100vh;
+    }
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 30px;
+    background-color: #00001a;
+  }
+
+  header h1 {
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+    flex: 1 1 200px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 2 1 400px;
+  }
+
+  nav a {
+    margin: 8px 10px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+
+    nav a {
+      font-size: 12px;
+    }
+  }
+
+    .toggle-btn {
+      background: #00fff7;
+      color: #000;
+      width: 90%;
+      max-width: 2000px;
+      padding: 16px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 30px auto 10px;
+      border: none;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #00c2ad;
+    }
+
+    .arrow {
+      margin-left: 10px;
+      transition: transform 0.4s ease;
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+    }
+
+    .card-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      animation: slideDown 0.5s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 255, 247, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 255, 247, 0.6);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #00fff7;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #00fff7;
+    }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .popup img {
+      max-width: 70%;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 600px) {
+      .toggle-btn {
+        width: 90%;
+        font-size: 14px;
+      }
+
+      .card-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+      }
+
+      .card img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .popup img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SEGAFAMS TEAM</h1>
+    <nav>
+      <a href="segafams.html">Kaciw</a>
+      <a href="sega.html">Segafams</a>
+      <a href="biodata.html">Biodata</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="kontak.html">kontak</a>
+    </nav>
+  </header>
+
+  <!-- Tombol Biodata Tim -->
+  <button class="toggle-btn" onclick="toggleCards('cardSectionTim', 'arrowTim')">
+    Lihat Biodata Tim <span id="arrowTim" class="arrow">▼</span>
+  </button>
+
+  <!-- Biodata Tim -->
+  <div id="cardSectionTim" class="card-container">
+    <div class="card" onclick="openPopup('promosi.jpg')">
+      <img src="chibi_alison.png" alt="Sonalibaba">
+      <h3>Sonalibaba</h3>
+    </div>
+    <div class="card" onclick="openPopup('img/epun.jpg')">
+      <img src="img/epun.jpg" alt="Epun">
+      <h3>Epun</h3>
+    </div>
+    <div class="card" onclick="openPopup('img/igoy.jpg')">
+      <img src="img/igoy.jpg" alt="Igoy">
+      <h3>Igoy</h3>
+    </div>
+    <div class="card" onclick="openPopup('img/apiip.jpg')">
+      <img src="img/apiip.jpg" alt="Apiip">
+      <h3>Apiip</h3>
+    </div>
+  </div>
+
+  <!-- Tombol Biodata Admin -->
+  <button class="toggle-btn" onclick="toggleCards('cardSectionAdmin', 'arrowAdmin')">
+    Lihat Biodata Admin <span id="arrowAdmin" class="arrow">▼</span>
+  </button>
+
+  <!-- Biodata Admin -->
+  <div id="cardSectionAdmin" class="card-container">
+    <div class="card">
+      <img src="img/admin1.jpg" alt="Admin 1">
+      <h3>Admin A</h3>
+      <p>Founder Segafams</p>
+    </div>
+    <div class="card">
+      <img src="img/admin2.jpg" alt="Admin 2">
+      <h3>Admin B</h3>
+      <p>Pengelola Website</p>
+    </div>
+  </div>
+
+  <!-- Popup Container -->
+  <div id="popup" class="popup" onclick="closePopup()">
+    <img id="popupImage" src="" alt="Full Image">
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleCards(sectionId, arrowId) {
+      const container = document.getElementById(sectionId);
+      const arrow = document.getElementById(arrowId);
+      
+      if (container.style.display === "grid") {
+        container.style.display = "none";
+        arrow.classList.remove("rotate");
+      } else {
+        container.style.display = "grid";
+        arrow.classList.add("rotate");
+      }
+    }
+
+    function openPopup(imageSrc) {
+      const popup = document.getElementById('popup');
+      const popupImage = document.getElementById('popupImage');
+      popupImage.src = imageSrc;
+      popup.style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
