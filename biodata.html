@@ -11,7 +11,7 @@
       font-family: 'Poppins', sans-serif;
     }
 
-     body {
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: url(blurr.jpg);
@@ -19,60 +19,66 @@
       color: #fff;
     }
 
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 15px 30px;
-    background-color: #00001a;
-  }
-
-  header h1 {
-    font-size: 22px;
-    color: #fff;
-    margin: 0;
-    flex: 1 1 200px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    flex: 2 1 400px;
-  }
-
-  nav a {
-    margin: 8px 10px;
-    color: #ccc;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 6px 10px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav a:hover {
-    color: #ffffff;
-  }
-
-  @media (max-width: 600px) {
     header {
-      flex-direction: column;
-      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px 30px;
+      background-color: #00001a;
+    }
+
+    header h1 {
+      font-size: 22px;
+      color: #fff;
+      margin: 0;
+      flex: 1 1 200px;
     }
 
     nav {
-      width: 100%;
-      justify-content: flex-start;
-      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex: 2 1 400px;
     }
 
     nav a {
-      font-size: 12px;
+      margin: 8px 10px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
     }
-  }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        text-align: left;
+        padding: 10px 15px;
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+      }
+    }
 
     .toggle-btn {
       background: #00fff7;
@@ -207,37 +213,33 @@
     </nav>
   </header>
 
-  <!-- Tombol Biodata Tim -->
   <button class="toggle-btn" onclick="toggleCards('cardSectionTim', 'arrowTim')">
     Lihat Biodata Tim <span id="arrowTim" class="arrow">▼</span>
   </button>
 
-  <!-- Biodata Tim -->
   <div id="cardSectionTim" class="card-container">
     <div class="card" onclick="openPopup('Bembi.jpg')">
       <img src="chibi_alison.png" alt="Sonalibaba">
       <h3>Sonalibaba</h3>
     </div>
     <div class="card" onclick="openPopup('Papun.jpg')">
-      <img src="chibi_epun.png" alt="Epun">
+      <img src="chibi_epin.png" alt="Epun">
       <h3>Epun</h3>
     </div>
     <div class="card" onclick="openPopup('Mas_yogi.jpg')">
-      <img src="chibi_igoy.png" alt="Igoy">
+      <img src="chibi_igoy" alt="Igoy">
       <h3>Igoy</h3>
     </div>
     <div class="card" onclick="openPopup('Ayah_apip.jpg')">
-      <img src="chibi_apip.png" alt="Apiip">
+      <img src="chibi_apip" alt="Apiip">
       <h3>Apiip</h3>
     </div>
   </div>
 
-  <!-- Tombol Biodata Admin -->
   <button class="toggle-btn" onclick="toggleCards('cardSectionAdmin', 'arrowAdmin')">
     Lihat Biodata Admin <span id="arrowAdmin" class="arrow">▼</span>
   </button>
 
-  <!-- Biodata Admin -->
   <div id="cardSectionAdmin" class="card-container">
     <div class="card">
       <img src="img/admin1.jpg" alt="Admin 1">
@@ -251,17 +253,14 @@
     </div>
   </div>
 
-  <!-- Popup Container -->
   <div id="popup" class="popup" onclick="closePopup()">
     <img id="popupImage" src="" alt="Full Image">
   </div>
 
-  <!-- Script -->
   <script>
     function toggleCards(sectionId, arrowId) {
       const container = document.getElementById(sectionId);
       const arrow = document.getElementById(arrowId);
-      
       if (container.style.display === "grid") {
         container.style.display = "none";
         arrow.classList.remove("rotate");
