@@ -23,61 +23,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      padding: 15px 30px;
+      padding: 20px 40px;
       background-color: #00001a;
     }
 
     header h1 {
-      font-size: 22px;
+      font-size: 24px;
       color: #fff;
-      margin: 0;
-      flex: 1 1 200px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      flex: 2 1 400px;
     }
 
     nav a {
-      margin: 8px 10px;
+      margin-left: 20px;
       color: #ccc;
       text-decoration: none;
       font-size: 14px;
-      padding: 6px 10px;
-      border-radius: 5px;
-      transition: background 0.3s, color 0.3s;
     }
 
     nav a:hover {
-      color: #ffffff;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-
-      nav a {
-        display: block;
-        width: 100%;
-        font-size: 14px;
-        text-align: left;
-        padding: 10px 15px;
-        margin: 0;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-      }
+      color: #fff;
     }
 
     .toggle-btn {
@@ -203,15 +166,15 @@
 <body>
 
   <header>
-    <h1>SEGAFAMS TEAM</h1>
-    <nav>
-      <a href="segafams.html">Kaciw</a>
-      <a href="sega.html">Segafams</a>
-      <a href="biodata.html">Biodata</a>
-      <a href="galeri.html">Galeri</a>
-      <a href="kontak.html">kontak</a>
-    </nav>
-  </header>
+  <h1>SEGAFAMS</h1>
+  <nav>
+    <a href="segafams.html">Kaciw</a>
+    <a href="sega.html">Segafams</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
 
   <button class="toggle-btn" onclick="toggleCards('cardSectionTim', 'arrowTim')">
     Lihat Biodata Tim <span id="arrowTim" class="arrow">▼</span>
