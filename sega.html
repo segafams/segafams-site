@@ -24,6 +24,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: opacity 0.5s ease;
+    }
+
+    body.fade-out {
+      opacity: 0;
     }
 
     header {
@@ -39,17 +44,38 @@
       z-index: 1000;
     }
 
+    @keyframes naikTurunHuruf {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
     header h1 {
       font-size: 24px;
       color: #fff;
-      margin: 0;
+      display: flex;
+      gap: 2px;
     }
 
-    nav a {
+    header h1 span {
+      display: inline-block;
+      animation: naikTurunHuruf 1.5s infinite ease-in-out;
+    }
+
+    header h1 span:nth-child(1) { animation-delay: 0s; }
+    header h1 span:nth-child(2) { animation-delay: 0.1s; }
+    header h1 span:nth-child(3) { animation-delay: 0.2s; }
+    header h1 span:nth-child(4) { animation-delay: 0.3s; }
+    header h1 span:nth-child(5) { animation-delay: 0.4s; }
+    header h1 span:nth-child(6) { animation-delay: 0.5s; }
+    header h1 span:nth-child(7) { animation-delay: 0.6s; }
+    header h1 span:nth-child(8) { animation-delay: 0.7s; }
+
+   nav a {
       margin-left: 20px;
       color: #ccc;
       text-decoration: none;
       font-size: 14px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -136,7 +162,9 @@
 
   <!-- Header dari code pertama -->
   <header>
-    <h1>SEGAFAMS</h1>
+    <h1>
+    <span>S</span><span>E</span><span>G</span><span>A</span><span>F</span><span>A</span><span>M</span><span>S</span>
+  </h1>
     <nav>
       <a href="segafams.html">Kaciw</a>
       <a href="sega.html">Segafams</a>
@@ -198,6 +226,25 @@
     function openLink(url) {
       window.open(url, '_blank');
     }
+
+     document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+
+      // Tambahkan animasi klik
+      this.classList.add("animate-click");
+
+      // Setelah animasi klik, lakukan fade out dan pindah halaman
+      setTimeout(() => {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500); // durasi fade-out
+      }, 200); // durasi klikShake
+    });
+  });
+
   </script>
 
 </body>
