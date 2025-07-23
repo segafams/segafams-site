@@ -12,6 +12,11 @@
       background: url(blurr.jpg);
       background-size: cover;
       color: #fff;
+      transition: opacity 0.5s ease; 
+    }
+
+     body.fade-out {
+      opacity: 0;
     }
 
     header {
@@ -22,20 +27,55 @@
       background-color: #00001a;
     }
 
+    @keyframes naikTurunHuruf {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
     header h1 {
       font-size: 24px;
       color: #fff;
+      display: flex;
+      gap: 2px;
     }
+
+    header h1 span {
+      display: inline-block;
+      animation: naikTurunHuruf 1.5s infinite ease-in-out;
+    }
+
+    header h1 span:nth-child(1) { animation-delay: 0s; }
+    header h1 span:nth-child(2) { animation-delay: 0.1s; }
+    header h1 span:nth-child(3) { animation-delay: 0.2s; }
+    header h1 span:nth-child(4) { animation-delay: 0.3s; }
+    header h1 span:nth-child(5) { animation-delay: 0.4s; }
+    header h1 span:nth-child(6) { animation-delay: 0.5s; }
+    header h1 span:nth-child(7) { animation-delay: 0.6s; }
+    header h1 span:nth-child(8) { animation-delay: 0.7s; }
 
     nav a {
       margin-left: 20px;
       color: #ccc;
       text-decoration: none;
       font-size: 14px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
       color: #fff;
+    }
+
+    /* Efek klik animasi */
+    /* @keyframes klikShake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      50% { transform: translateX(3px); }
+      75% { transform: translateX(-3px); }
+      100% { transform: translateX(0); }
+    } */
+
+    nav a.animate-click {
+      animation: klikShake 0.3s ease;
     }
 
     .hero {
@@ -107,19 +147,19 @@
     .card-4 { background-color: #ffcc00; color: #000; }
 
     .btn-sosmed {
-  display: block;
-  width: 80%;
-  margin: 10px auto 0;    
-  padding: 15px 20px;     
-  font-size: 16px;        
-  font-weight: bold;
-  border: none;
-  border-radius: 30px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
+      display: block;
+      width: 80%;
+      margin: 10px auto 0;    
+      padding: 15px 20px;     
+      font-size: 16px;        
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
 
     .btn-1 { background-color: #0fd326; color: #000; }
     .btn-2 { background-color: #df1e1e; }
@@ -127,7 +167,7 @@
     .btn-4 { background-color: #ffcc00; color: #000; }
 
     .btn-sosmed:hover {
-  transform: scale(1.1);
+      transform: scale(1.1);
     }
 
     footer {
@@ -149,7 +189,9 @@
 <body>
 
 <header>
-  <h1>SEGAFAMS</h1>
+  <h1>
+    <span>S</span><span>E</span><span>G</span><span>A</span><span>F</span><span>A</span><span>M</span><span>S</span>
+  </h1>
   <nav>
     <a href="segafams.html">Kaciw</a>
     <a href="sega.html">Segafams</a>
@@ -176,11 +218,11 @@
 
     <div>
       <div class="youtuber-card card-1">
-         <a href="https://www.youtube.com/@MrSonalibaba" target="_blank" class="youtuber-card card-1">
-        <p class="label-channel">Channel YouTube</p>
-        <img src="avatar1.png" alt="Sonalibaba" />
-        <h4>Sonalibaba</h4>
-        <p>subscribe now</p>
+        <a href="https://www.youtube.com/@MrSonalibaba" target="_blank" class="youtuber-card card-1">
+          <p class="label-channel">Channel YouTube</p>
+          <img src="avatar1.png" alt="Sonalibaba" />
+          <h4>Sonalibaba</h4>
+          <p>subscribe now</p>
         </a>
       </div>
       <a href="Alison Sosmed.html" target="_blank" class="btn-sosmed btn-1">All Sosmed Sonba</a>
@@ -189,10 +231,10 @@
     <div>
       <div class="youtuber-card card-2">
         <a href="https://www.youtube.com/@Epun7" target="_blank" class="youtuber-card card-2">
-        <p class="label-channel">Channel YouTube</p>
-        <img src="avatar2.png" alt="Epun" />
-        <h4>Epun</h4>
-        <p>subscribe now</p>
+          <p class="label-channel">Channel YouTube</p>
+          <img src="avatar2.png" alt="Epun" />
+          <h4>Epun</h4>
+          <p>subscribe now</p>
         </a>
       </div>
       <a href="Epun Sosmed.html" target="_blank" class="btn-sosmed btn-2">All Sosmed Epun</a>
@@ -201,10 +243,10 @@
     <div>
       <div class="youtuber-card card-3">
         <a href="https://www.youtube.com/@GOGOGOY" target="_blank" class="youtuber-card card-3">
-        <p class="label-channel">Channel YouTube</p>
-        <img src="avatar3.png" alt="Gogogoy" />
-        <h4>Gogogoy</h4>
-        <p>subscribe now</p>
+          <p class="label-channel">Channel YouTube</p>
+          <img src="avatar3.png" alt="Gogogoy" />
+          <h4>Gogogoy</h4>
+          <p>subscribe now</p>
         </a>
       </div>
       <a href="Igoy Sosmed.html" target="_blank" class="btn-sosmed btn-3">All Sosmed Igoy</a>
@@ -213,10 +255,10 @@
     <div>
       <div class="youtuber-card card-4">
         <a href="https://www.youtube.com/@AfifYulistian" target="_blank" class="youtuber-card card-4">
-        <p class="label-channel">Channel YouTube</p>
-        <img src="avatar4.png" alt="Apip" />
-        <h4>Afif Yulistian</h4>
-        <p>subscribe now</p>
+          <p class="label-channel">Channel YouTube</p>
+          <img src="avatar4.png" alt="Apip" />
+          <h4>Afif Yulistian</h4>
+          <p>subscribe now</p>
         </a>
       </div>
       <a href="Apip Sosmed.html" target="_blank" class="btn-sosmed btn-4">All Sosmed Apip</a>
@@ -233,6 +275,28 @@
   </div>
   <p>&copy; 2025 Segafams. All rights reserved.</p>
 </footer>
+
+<!-- Tambahkan JavaScript di akhir sebelum </body> -->
+<script>
+  // Animasi klik + transisi fade out
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+
+      // Tambahkan animasi klik
+      this.classList.add("animate-click");
+
+      // Setelah animasi klik, lakukan fade out dan pindah halaman
+      setTimeout(() => {
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500); // durasi fade-out
+      }, 200); // durasi klikShake
+    });
+  });
+</script>
 
 </body>
 </html>
