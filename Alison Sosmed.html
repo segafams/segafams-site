@@ -1,114 +1,111 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Sosmed Alison</title>
-    <link rel="icon" href="chibi_alison.png" type="image/png">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #5E936C, #93DA97);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            color: white;
-        }
-
-        .container {
-            max-width: 400px;
-            margin-top: 80px;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        .btn-sosmed {
-            display: block;
-            background-color: #ffffff;
-            color: #1f4037;
-            text-decoration: none;
-            padding: 14px;
-            margin: 10px 0;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn-sosmed:hover {
-            background-color: #e0e0e0;
-            transform: scale(1.05);
-        }
-
-        footer {
-            margin-top: 40px;
-            font-size: 12px;
-            color: #f0f0f0;
-        }
-    </style>
-
-    <style>
-    .btn-kembali {
-      padding: 10px 20px;
-      background-color: #007bff;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Link Sosmed Alison</title>
+  <link rel="icon" href="chibi_alison.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #5E936C, #93DA97);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
+      position: relative;
     }
+
+    .btn-kembali {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #5E936C;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
     .btn-kembali:hover {
-      background-color: #0056b3;
+      background-color: #085c2f;
+    }
+
+    .container {
+      max-width: 400px;
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .btn-sosmed {
+      display: block;
+      background-color: #ffffff;
+      color: #1f4037;
+      text-decoration: none;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-sosmed:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #f0f0f0;
     }
   </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="chibi_alison.png" alt="Foto Alison" class="profile-img">
-        <h1>Sosial Media Sonba</h1>
-        <p>Temukan semua sosial media Alison di sini!</p>
+  <!-- Tombol Kembali Bulat -->
+  <a href="index.html" class="btn-kembali" title="Kembali ke Beranda">←</a>
 
-        <a href="https://www.instagram.com/sonalibaba?" target="_blank" class="btn-sosmed">Instagram</a>
-        <a href="https://www.tiktok.com/@sonalibaba_?" target="_blank" class="btn-sosmed">TikTok</a>
-        <a href="https://www.facebook.com/share/1LAN8wbQ82/?" target="_blank" class="btn-sosmed">Facebook</a>
-        <a href="https://www.threads.net/@sonalibaba" target="_blank" class="btn-sosmed">Threads</a>
-        <a href="https://tako.id/Sonalibaba" target="_blank" class="btn-sosmed">Tako</a>
-        <a href="https://discord.com/invite/NGSFhCm47Z" target="_blank" class="btn-sosmed">Discord</a>
-        <a href="https://bembitopup.com/?fbclid=PAQ0xDSwLmPo1leHRuA2FlbQIxMQABpy-9JH49-SqbH9caWXD-mFO2oBZA7ep5UVkzWMoAeDpcmWn60b3vfM0RzGwq_aem_VYOzQ49vMWusoBdoHTod3Q" target="_blank" class="btn-sosmed">Website TopUp</a>
-    </div>
-    
-    <!-- Tombol Kembali -->
-<div style="text-align: center; margin: 40px 0;">
-  <button onclick="goBack()" style="padding: 10px 20px; font-size: 14px; background-color: #ffcc00; color: #000; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
-    ← Kembali
-  </button>
-</div>
+  <div class="container">
+    <img src="chibi_alison.png" alt="Foto Alison" class="profile-img">
+    <h1>Sosial Media Sonba</h1>
+    <p>Temukan semua sosial media Alison di sini!</p>
 
-<!-- Fungsi JavaScript -->
-<script>
-  function goBack() {
-    window.history.back();
-  }
-</script>
+    <a href="https://www.instagram.com/sonalibaba?" target="_blank" class="btn-sosmed">Instagram</a>
+    <a href="https://www.tiktok.com/@sonalibaba_?" target="_blank" class="btn-sosmed">TikTok</a>
+    <a href="https://www.facebook.com/share/1LAN8wbQ82/?" target="_blank" class="btn-sosmed">Facebook</a>
+    <a href="https://www.threads.net/@sonalibaba" target="_blank" class="btn-sosmed">Threads</a>
+    <a href="https://tako.id/Sonalibaba" target="_blank" class="btn-sosmed">Tako</a>
+    <a href="https://discord.com/invite/NGSFhCm47Z" target="_blank" class="btn-sosmed">Discord</a>
+    <a href="https://bembitopup.com/?fbclid=PAQ0xDSwLmPo1leHRuA2FlbQIxMQABpy-9JH49-SqbH9caWXD-mFO2oBZA7ep5UVkzWMoAeDpcmWn60b3vfM0RzGwq_aem_VYOzQ49vMWusoBdoHTod3Q" target="_blank" class="btn-sosmed">Website TopUp</a>
+  </div>
 
-
-    <footer>
-        &copy; 2025 Segafams Official
-    </footer>
+  <footer>
+    &copy; 2025 Segafams Official
+  </footer>
 
 </body>
 </html>
