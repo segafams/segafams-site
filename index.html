@@ -184,6 +184,26 @@
       font-size: 18px;
       text-decoration: none;
     }
+
+   #imagePopupOverlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+#imagePopupOverlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+
   </style>
 </head>
 <body>
@@ -202,15 +222,24 @@
 </header>
 
 <section class="hero">
-  <div class="avatars">
-    <img src="chibi_alison.png" alt="Youtuber 1" />
-    <img src="chibi_epun.png" alt="Youtuber 2" />
-    <img src="chibi_igoy.png" alt="Youtuber 3" />
-    <img src="chibi_apip.png" alt="Youtuber 4" />
-  </div>
+ <div class="avatars">
+  <img src="chibi_alison.png" onclick="showImagePopup('segateam.jpg')" />
+  <img src="chibi_epun.png" onclick="showImagePopup('chibi_epun.png')" />
+  <img src="chibi_igoy.png" onclick="showImagePopup('chibi_igoy.png')" />
+  <img src="chibi_apip.png" onclick="showImagePopup('chibi_apip.png')" />
+</div>
+
+
   <h2>SEGAFAMS OFFICIAL</h2>
   <p>Komunitas Para Fans Tim Kaciw</p>
 </section>
+
+<!-- Popup untuk avatar -->
+<!-- Popup Gambar Saja -->
+<div id="imagePopupOverlay" onclick="closeImagePopup()">
+  <img id="popupOnlyImage" src="" alt="Popup Image">
+</div>
+
 
 <section class="section">
   <h3 style="text-align:center;">TIM KACIW</h3>
@@ -267,6 +296,17 @@
   </div>
 </section>
 
+<!-- Popup Container -->
+<!-- Popup Container -->
+<div id="popupOverlay" style="display:none;" onclick="closePopup()"></div>
+<div id="popupBox" style="display:none;">
+  <img id="popupImage" src="" alt="Popup Image" style="max-width: 100px; border-radius: 50%; margin-bottom: 10px;">
+  <h3 id="popupTitle"></h3>
+  <p id="popupContent"></p>
+  <button onclick="closePopup()">Tutup</button>
+</div>
+
+
 <footer>
   <div class="social-icons">
     <a href="#">Instagram</a>
@@ -296,6 +336,17 @@
       }, 200); // durasi klikShake
     });
   });
+
+ 
+function showImagePopup(imageSrc) {
+  document.getElementById("popupOnlyImage").src = imageSrc;
+  document.getElementById("imagePopupOverlay").style.display = "flex";
+}
+
+function closeImagePopup() {
+  document.getElementById("imagePopupOverlay").style.display = "none";
+}
+
 </script>
 
 </body>
