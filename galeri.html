@@ -6,117 +6,134 @@
     <link rel="icon" href="logo_sega.jpg" type="image/png" />
     <title>Galeri - Segafams Official</title>
     <style>
-        body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url(blurr.jpg);
-      background-size: cover;
-      color: #fff;
-      transition: opacity 0.5s ease; 
-    }
+       @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-     body.fade-out {
-      opacity: 0;
-    }
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: repeating-linear-gradient(
+    45deg,
+    #000010,
+    #000010 10px,
+    #0a0a1a 10px,
+    #0a0a1a 20px
+  );
+  color: #bfe9ff;
+  transition: opacity 0.5s ease;
+  image-rendering: pixelated;
+}
 
-        header {
-            background: #00001a;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+body.fade-out {
+  opacity: 0;
+}
 
-         @keyframes naikTurunHuruf {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+header {
+  background: #001133;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 4px solid #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+}
 
-    header h1 {
-      font-size: 24px;
-      color: #fff;
-      display: flex;
-      gap: 2px;
-    }
+@keyframes naikTurunHuruf {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 
-    header h1 span {
-      display: inline-block;
-      animation: naikTurunHuruf 1.5s infinite ease-in-out;
-    }
+header h1 {
+  font-size: 14px;
+  color: #00bfff;
+  display: flex;
+  gap: 2px;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #0077ff;
+}
 
-    header h1 span:nth-child(1) { animation-delay: 0s; }
-    header h1 span:nth-child(2) { animation-delay: 0.1s; }
-    header h1 span:nth-child(3) { animation-delay: 0.2s; }
-    header h1 span:nth-child(4) { animation-delay: 0.3s; }
-    header h1 span:nth-child(5) { animation-delay: 0.4s; }
-    header h1 span:nth-child(6) { animation-delay: 0.5s; }
-    header h1 span:nth-child(7) { animation-delay: 0.6s; }
-    header h1 span:nth-child(8) { animation-delay: 0.7s; }
+header h1 span {
+  display: inline-block;
+  animation: naikTurunHuruf 1.5s infinite ease-in-out;
+}
 
-    nav a {
-      margin-left: 20px;
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
+nav a {
+  margin-left: 15px;
+  color: #66ccff;
+  text-decoration: none;
+  font-size: 8px;
+  border: 2px solid #0077ff;
+  padding: 6px 10px;
+  background: #000020;
+  box-shadow: 0 0 10px #0077ff;
+  transition: all 0.2s ease;
+}
 
-    nav a:hover {
-      color: #fff;
-    }
+nav a:hover {
+  background: #0077ff;
+  color: #000;
+  box-shadow: 0 0 20px #00bfff;
+}
 
-        h2 {
-            text-align: center;
-            margin: 40px 0 20px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 10px 20px;
-            font-size: 24px;
-        }
+h2 {
+  text-align: center;
+  margin: 40px 0 20px;
+  background: #001133;
+  border: 3px solid #00bfff;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+}
 
-        .gallery-section {
-            max-width: 1200px;
-            margin: 0 auto 50px;
-            overflow-x: auto;
-            padding: 20px;
-        }
+.gallery-section {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  overflow-x: auto;
+  padding: 20px;
+}
 
-        .gallery-row {
-            display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            padding-bottom: 10px;
-        }
+.gallery-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
 
-        .gallery-row a {
-            flex: 0 0 auto;
-        }
+.gallery-row a {
+  flex: 0 0 auto;
+}
 
-        .gallery-row img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 15px;
-            border: 2px solid #00fff7;
-            transition: transform 0.3s ease;
-        }
+.gallery-row img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #00bfff;
+  background: #000020;
+  image-rendering: pixelated;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px #0077ff;
+}
 
-        .gallery-row img:hover {
-            transform: scale(1.1);
-            border-color: #00c2ad;
-        }
+.gallery-row img:hover {
+  transform: scale(1.1);
+  border-color: #66ccff;
+  box-shadow: 0 0 25px #00bfff;
+}
 
-        footer {
-            background: #00001a;
-            padding: 20px;
-            text-align: center;
-            color: #aaa;
-            font-size: 14px;
-        }
+footer {
+  background: #001133;
+  padding: 20px;
+  text-align: center;
+  color: #66ccff;
+  font-size: 8px;
+  border-top: 4px solid #00bfff;
+  box-shadow: 0 -5px 20px #0077ff;
+}
     </style>
 </head>
 <body>
@@ -132,6 +149,7 @@
     <a href="galeri.html">Galeri</a>
     <a href="kontak.html">Kontak</a>
     <a href="event.html">Event</a>
+    <a href="shop.html">Shop</a>
   </nav>
 </header>
 
@@ -159,67 +177,65 @@
 <h2>Admin</h2>
 <div class="gallery-section">
     <div class="gallery-row">
-        <a href="Nova.jpg" target="_blank">
-            <img src="Nova.jpg" alt="Ketua">
+        <a href="chibi_admin/Nova.jpg" target="_blank">
+            <img src="chibi_admin/Nova.jpg" alt="Ketua">
         </a>
-        <a href="yoga.png" target="_blank">
-            <img src="yoga.png" alt="Wakil">
+        <a href="chibi_admin/yoga.png" target="_blank">
+            <img src="chibi_admin/yoga.png" alt="Wakil">
         </a>
-        <a href="Ema.jpg" target="_blank">
-            <img src="Ema.jpg" alt="Penasihat">
+        <a href="chibi_admin/Ema.jpg" target="_blank">
+            <img src="chibi_admin/Ema.jpg" alt="Penasihat">
         </a>
-        <a href="aldi.png" target="_blank">
-            <img src="aldi.png" alt="Penasihat">
+        <a href="chibi_admin/aldi.png" target="_blank">
+            <img src="chibi_admin/aldi.png" alt="Penasihat">
         </a>
-        <a href="nitha.png" target="_blank">
-            <img src="nitha.png" alt="Notulen">
+        <a href="chibi_admin/nitha.png" target="_blank">
+            <img src="chibi_admin/nitha.png" alt="Notulen">
         </a>
-        <a href="messa.png" target="_blank">
-            <img src="messa.png" alt="Platform">
+        <a href="chibi_admin/messa.png" target="_blank">
+            <img src="chibi_admin/messa.png" alt="Platform">
         </a>
-        <a href="tatan.png" target="_blank">
-            <img src="tatan.png" alt="Platform">
+        <a href="chibi_admin/tatan.png" target="_blank">
+            <img src="chibi_admin/tatan.png" alt="Platform">
         </a>
-        <a href="nayla.png" target="_blank">
-            <img src="nayla.png" alt="Sosmed">
+        <a href="chibi_admin/lena.png" target="_blank">
+            <img src="chibi_admin/lena.png" alt="Sosmed">
         </a>
-        <a href="lena.png" target="_blank">
-            <img src="lena.png" alt="Sosmed">
+        <a href="chibi_admin/rusty.png" target="_blank">
+            <img src="chibi_admin/rusty.png" alt="Keamanan">
+        </a>
+        <a href="chibi_admin/suqun.png" target="_blank">
+            <img src="chibi_admin/suqun.png" alt="Keamanan">
         </a>
         <!-- Tambahkan gambar Member -->
     </div>
 </div>
 <div class="gallery-section">
     <div class="gallery-row">
-         <a href="rusty.png" target="_blank">
-            <img src="rusty.png" alt="Keamanan">
+         
+        <a href="chibi_admin/Tomat.jpg" target="_blank">
+            <img src="chibi_admin/Tomat.jpg" alt="Editor">
         </a>
-        <a href="suqun.png" target="_blank">
-            <img src="suqun.png" alt="Keamanan">
+        <a href="chibi_admin/aurel.png" target="_blank">
+            <img src="chibi_admin/aurel.png" alt="Editor">
         </a>
-        <a href="Tomat.jpg" target="_blank">
-            <img src="Tomat.jpg" alt="Editor">
+        <a href="chibi_admin/icel.png" target="_blank">
+            <img src="chibi_admin/icel.png" alt="Editor">
         </a>
-        <a href="aurel.png" target="_blank">
-            <img src="aurel.png" alt="Editor">
+        <a href="chibi_admin/romeo.png" target="_blank">
+            <img src="chibi_admin/romeo.png" alt="Editor">
         </a>
-        <a href="icel.png" target="_blank">
-            <img src="icel.png" alt="Editor">
+        <a href="chibi_admin/pelis.png" target="_blank">
+            <img src="chibi_admin/pelis.png" alt="Editor">
         </a>
-        <a href="romeo.png" target="_blank">
-            <img src="romeo.png" alt="Editor">
+        <a href="chibi_admin/rey.png" target="_blank">
+            <img src="chibi_admin/rey.png" alt="Editor">
         </a>
-        <a href="artha.png" target="_blank">
-            <img src="artha.png" alt="Editor">
+        <a href="chibi_admin/nelvin.jpg" target="_blank">
+            <img src="chibi_admin/nelvin.jpg" alt="Editor">
         </a>
-        <a href="pelis.png" target="_blank">
-            <img src="pelis.png" alt="Editor">
-        </a>
-        <a href="rey.png" target="_blank">
-            <img src="rey.png" alt="Editor">
-        </a>
-        <a href="panpan.png" target="_blank">
-            <img src="panpan.png" alt="Editor">
+        <a href="chibi_admin/raras.jpg" target="_blank">
+            <img src="chibi_admin/raras.jpg" alt="Editor">
         </a>
     </div>
 </div>  
