@@ -3,194 +3,211 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="logo_sega.jpg" type="image/png" />
   <title>Kontak - SEGAFAMS</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-    body {
-      background: url(blurr.jpg);
-      background-size: cover;
-      background-attachment: fixed;
-      color: white;
-      min-height: 100vh;
-      transition: opacity 0.5s ease;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+}
 
-    body.fade-out {
-      opacity: 0;
-    }
+body {
+  background: repeating-linear-gradient(
+    45deg,
+    #000010,
+    #000010 10px,
+    #0a0a1a 10px,
+    #0a0a1a 20px
+  );
+  background-attachment: fixed;
+  color: #bfe9ff;
+  min-height: 100vh;
+  transition: opacity 0.5s ease;
+  image-rendering: pixelated;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #00001a;
-    }
+body.fade-out {
+  opacity: 0;
+}
 
-    @keyframes naikTurunHuruf {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: #001133;
+  border-bottom: 4px solid #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+}
 
-    header h1 {
-      font-size: 24px;
-      color: #fff;
-      display: flex;
-      gap: 2px;
-    }
+@keyframes naikTurunHuruf {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 
-    header h1 span {
-      display: inline-block;
-      animation: naikTurunHuruf 1.5s infinite ease-in-out;
-    }
+header h1 {
+  font-size: 14px;
+  color: #00bfff;
+  display: flex;
+  gap: 2px;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #0077ff;
+}
 
-    header h1 span:nth-child(n) { animation-delay: calc(0.1s * var(--i)); }
+header h1 span {
+  display: inline-block;
+  animation: naikTurunHuruf 1.5s infinite ease-in-out;
+}
 
-    nav a {
-      margin-left: 20px;
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
+nav a {
+  margin-left: 15px;
+  color: #66ccff;
+  text-decoration: none;
+  font-size: 8px;
+  border: 2px solid #0077ff;
+  padding: 6px 10px;
+  background: #000020;
+  box-shadow: 0 0 10px #0077ff;
+  transition: all 0.2s ease;
+}
 
-    nav a:hover {
-      color: #fff;
-    }
+nav a:hover {
+  background: #0077ff;
+  color: #000;
+  box-shadow: 0 0 20px #00bfff;
+}
 
-    .main-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-      padding: 40px 20px;
-    }
+.main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 60px 20px;
+}
 
-    .box {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 30px;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
-      width: 100%;
-      max-width: 500px;
-      animation: fadeSlideUp 1s ease forwards;
-      opacity: 0;
-      transition: box-shadow 0.4s;
-    }
+.box {
+  background: #001133;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+  transition: box-shadow 0.4s;
+}
 
-    .box:hover {
-      box-shadow: 0 0 25px #00fff7, 0 0 50px rgba(0, 255, 255, 0.3);
-    }
+.box:hover {
+  box-shadow: 0 0 25px #00bfff, 0 0 40px #0077ff;
+}
 
-    .box h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 26px;
-      color: #00fff7;
-    }
+.box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 12px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+}
 
-    .form-group {
-      margin-bottom: 20px;
-      position: relative;
-    }
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
 
-    .form-group label {
-      position: absolute;
-      top: 14px;
-      left: 16px;
-      color: #ccc;
-      font-size: 14px;
-      pointer-events: none;
-      transition: 0.3s ease;
-    }
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: #66ccff;
+  font-size: 8px;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: transparent;
+}
 
-    .form-group input:focus + label,
-    .form-group textarea:focus + label,
-    .form-group input:not(:placeholder-shown) + label,
-    .form-group textarea:not(:placeholder-shown) + label {
-      top: -10px;
-      left: 10px;
-      font-size: 12px;
-      color: #00fff7;
-      background: #0f0f2b;
-      padding: 0 4px;
-      border-radius: 5px;
-    }
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 7px;
+  color: #00bfff;
+  background: #000020;
+  padding: 0 4px;
+  border-radius: 3px;
+}
 
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.08);
-      color: white;
-      font-size: 14px;
-      outline: none;
-      transition: all 0.3s;
-    }
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #0077ff;
+  border-radius: 8px;
+  background: #000020;
+  color: #bfe9ff;
+  font-size: 8px;
+  outline: none;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px #0077ff;
+}
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #00fff7;
-      box-shadow: 0 0 10px #00fff7;
-      background: rgba(255, 255, 255, 0.12);
-    }
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 15px #00bfff;
+}
 
-    .btn-kirim {
-      display: block;
-      text-align: center;
-      padding: 12px 20px;
-      border-radius: 12px;
-      background: #00fff7;
-      color: #1a1a1a;
-      font-weight: bold;
-      font-size: 16px;
-      border: none;
-      text-decoration: none;
-      transition: all 0.3s;
-      margin-top: 10px;
-      width: 100%;
-    }
+.btn-kirim {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #00bfff;
+  color: #000;
+  font-size: 9px;
+  border: 2px solid #0077ff;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin-top: 10px;
+  width: 100%;
+  box-shadow: 0 0 15px #00bfff;
+}
 
-    .btn-kirim:hover {
-      background: #00e5ff;
-      transform: scale(1.05);
-    }
+.btn-kirim:hover {
+  background: #0077ff;
+  color: #fff;
+  box-shadow: 0 0 25px #00bfff;
+  transform: scale(1.05);
+}
 
-    .contact-info p {
-      margin-bottom: 10px;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #e0e0e0;
-    }
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 8px;
+  line-height: 1.8;
+  color: #66ccff;
+}
 
-    @keyframes fadeSlideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    @media (max-width: 768px) {
-      .main-wrapper {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+@media (max-width: 768px) {
+  .main-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
   </style>
 </head>
 <body>
@@ -201,12 +218,14 @@
     <span style="--i:4;">A</span><span style="--i:5;">F</span><span style="--i:6;">A</span>
     <span style="--i:7;">M</span><span style="--i:8;">S</span>
   </h1>
-  <nav>
+ <nav>
     <a href="segafams.html">Kaciw</a>
     <a href="sega.html">Segafams</a>
     <a href="biodata.html">Biodata</a>
     <a href="galeri.html">Galeri</a>
     <a href="kontak.html">Kontak</a>
+    <a href="event.html">Event</a>
+    <a href="shop.html">Shop</a>
   </nav>
 </header>
 
@@ -239,7 +258,7 @@
     </a>
   </p> -->
   <p>📞 Telepon: 
-    <a href="https://wa.me/628215650456" target="_blank" style="color: #00fff7; text-decoration: none;">
+    <a href="https://wa.me/6285880494629" target="_blank" style="color: #00fff7; text-decoration: none;">
       +62 821-5650-4566
     </a>
   </p>
