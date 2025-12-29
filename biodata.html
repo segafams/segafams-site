@@ -7,195 +7,208 @@
   <title>Segafams Team</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url(blurr.jpg);
-      background-size: cover;
-      color: #fff;
-      transition: opacity 0.5s ease; 
-    }
+* {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
 
-     body.fade-out {
-      opacity: 0;
-    }
+body {
+  margin: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    #000010,
+    #000010 10px,
+    #0a0a1a 10px,
+    #0a0a1a 20px
+  );
+  color: #bfe9ff;
+  transition: opacity 0.5s ease;
+  image-rendering: pixelated;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #00001a;
-    }
+body.fade-out {
+  opacity: 0;
+}
 
-    @keyframes naikTurunHuruf {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: #001133;
+  border-bottom: 4px solid #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+}
 
-    header h1 {
-      font-size: 24px;
-      color: #fff;
-      display: flex;
-      gap: 2px;
-    }
+@keyframes naikTurunHuruf {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 
-    header h1 span {
-      display: inline-block;
-      animation: naikTurunHuruf 1.5s infinite ease-in-out;
-    }
+header h1 {
+  font-size: 14px;
+  color: #00bfff;
+  display: flex;
+  gap: 2px;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #0077ff;
+}
 
-    header h1 span:nth-child(1) { animation-delay: 0s; }
-    header h1 span:nth-child(2) { animation-delay: 0.1s; }
-    header h1 span:nth-child(3) { animation-delay: 0.2s; }
-    header h1 span:nth-child(4) { animation-delay: 0.3s; }
-    header h1 span:nth-child(5) { animation-delay: 0.4s; }
-    header h1 span:nth-child(6) { animation-delay: 0.5s; }
-    header h1 span:nth-child(7) { animation-delay: 0.6s; }
-    header h1 span:nth-child(8) { animation-delay: 0.7s; }
+header h1 span {
+  display: inline-block;
+  animation: naikTurunHuruf 1.5s infinite ease-in-out;
+}
 
-    nav a {
-      margin-left: 20px;
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
+nav a {
+  margin-left: 15px;
+  color: #66ccff;
+  text-decoration: none;
+  font-size: 8px;
+  border: 2px solid #0077ff;
+  padding: 6px 10px;
+  background: #000020;
+  box-shadow: 0 0 10px #0077ff;
+  transition: all 0.2s ease;
+}
 
-    nav a:hover {
-      color: #fff;
-    }
+nav a:hover {
+  background: #0077ff;
+  color: #000;
+  box-shadow: 0 0 20px #00bfff;
+}
 
-    .toggle-btn {
-      background: #00fff7;
-      color: #000;
-      width: 90%;
-      max-width: 2000px;
-      padding: 16px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      margin: 30px auto 10px;
-      border: none;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+.toggle-btn {
+  background: #00bfff;
+  color: #000;
+  width: 90%;
+  max-width: 1000px;
+  padding: 14px 20px;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 40px auto 20px;
+  border: 3px solid #0077ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00bfff;
+  transition: all 0.3s ease;
+}
 
-    .toggle-btn:hover {
-      background: #00c2ad;
-    }
+.toggle-btn:hover {
+  background: #0077ff;
+  color: #fff;
+  box-shadow: 0 0 25px #00bfff;
+}
 
-    .arrow {
-      margin-left: 10px;
-      transition: transform 0.4s ease;
-    }
+.arrow {
+  margin-left: 10px;
+  transition: transform 0.4s ease;
+}
 
-    .rotate {
-      transform: rotate(180deg);
-    }
+.rotate {
+  transform: rotate(180deg);
+}
 
-    .card-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-      display: none;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      animation: slideDown 0.5s ease forwards;
-    }
+.card-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  animation: slideDown 0.5s ease forwards;
+}
 
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0, 255, 247, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
+.card {
+  background: #001133;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 15px #0077ff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(0, 255, 247, 0.6);
-    }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00bfff;
+}
 
-    .card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #00fff7;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
+.card img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #00bfff;
+  background: #000020;
+  image-rendering: pixelated;
+  margin-bottom: 15px;
+}
 
-    .card h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
-      color: #00fff7;
-    }
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 9px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+}
 
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,20,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
 
-    .popup img {
-      max-width: 70%;
-      max-height: 80vh;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.5);
-    }
+.popup img {
+  max-width: 70%;
+  max-height: 80vh;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 25px #00bfff;
+  background: #000020;
+}
 
-    @media (max-width: 600px) {
-      .toggle-btn {
-        width: 90%;
-        font-size: 14px;
-      }
-
-      .card-container {
-        grid-template-columns: 1fr;
-        padding: 10px;
-      }
-
-      .card img {
-        width: 80px;
-        height: 80px;
-      }
-
-      .popup img {
-        max-width: 90%;
-      }
-    }
-    .sub-title {
+.sub-title {
   grid-column: 1 / -1;
-  font-size: 20px;
-  font-weight: 600;
-  color: #00fff7;
+  font-size: 10px;
+  font-weight: bold;
+  color: #00bfff;
   margin: 30px 0 10px;
   text-align: left;
+  text-shadow: 0 0 10px #0077ff;
+}
+
+@media (max-width: 600px) {
+  .toggle-btn {
+    width: 90%;
+    font-size: 8px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .popup img {
+    max-width: 90%;
+  }
 }
 
   </style>
@@ -213,6 +226,7 @@
     <a href="galeri.html">Galeri</a>
     <a href="kontak.html">Kontak</a>
     <a href="event.html">Event</a>
+    <a href="shop.html">Shop</a>
   </nav>
 </header>
 
@@ -221,20 +235,20 @@
   </button>
 
   <div id="cardSectionTim" class="card-container">
-    <div class="card" onclick="openPopup('Bembi.jpg')">
-      <img src="chibi_alison.png" alt="Sonalibaba">
+    <div class="card" onclick="openPopup('kaciw/Bembi.jpg')">
+      <img src="kaciw/char_bambang.PNG" alt="Sonalibaba">
       <h3>Sonalibaba</h3>
     </div>
-    <div class="card" onclick="openPopup('Papun.jpg')">
-      <img src="chibi_epun.png" alt="Epun">
+    <div class="card" onclick="openPopup('kaciw/Papun.jpg')">
+      <img src="kaciw/cahr_epun.PNG" alt="Epun">
       <h3>Epun</h3>
     </div>
-    <div class="card" onclick="openPopup('Mas_yogi.jpg')">
-      <img src="chibi_igoy.png" alt="Igoy">
+    <div class="card" onclick="openPopup('kaciw/Mas_yogi.jpg')">
+      <img src="kaciw/char_igoy.PNG" alt="Igoy">
       <h3>Igoy</h3>
     </div>
-    <div class="card" onclick="openPopup('Ayah_apip.jpg')">
-      <img src="chibi_apip.png" alt="Apiip">
+    <div class="card" onclick="openPopup('kaciw/Ayah_apip.jpg')">
+      <img src="kaciw/char_apip.PNG" alt="Apiip">
       <h3>Apiip</h3>
     </div>
   </div>
@@ -247,114 +261,104 @@
 
   <!-- Ketua & Wakil -->
   <h2 class="sub-title">Ketua & Wakil Ketua</h2>
-    <div class="card" onclick="openPopup('id_nova.jpg')">
-    <img src="Nova.jpg" alt="Admin 1">
+    <div class="card" onclick="openPopup('id_card/id_nova.jpg')">
+    <img src="chibi_admin/Nova.jpg" alt="Admin 1">
     <h3>Nova</h3>
     <p>Ketua Segafams</p>
   </div>
-  <div class="card" onclick="openPopup('id_yoga.jpg')">
-    <img src="yoga.png" alt="Admin 2">
+  <div class="card" onclick="openPopup('id_card/id_yoga.jpg')">
+    <img src="chibi_admin/yoga.png" alt="Admin 2">
     <h3>Yoga</h3>
     <p>Wakil Ketua</p>
   </div>
 
   <!-- Penasehat -->
   <h2 class="sub-title">Penasehat</h2>
-  <div class="card" onclick="openPopup('id_ema.jpg')">
-    <img src="Ema.jpg" alt="Admin 3">
+  <div class="card" onclick="openPopup('id_card/id_ema.jpg')">
+    <img src="chibi_admin/Ema.jpg" alt="Admin 3">
     <h3>Ema</h3>
-    <p>Penasehat</p>
-  </div>
-  <div class="card" onclick="openPopup('id_mashiro.jpg')">
-    <img src="aldi.png" alt="Admin 3">
-    <h3>Aldi</h3>
     <p>Penasehat</p>
   </div>
 
   <!-- Notulen -->
   <h2 class="sub-title">Notulen</h2>
-  <div class="card" onclick="openPopup('id_nitha.jpg')">
-    <img src="nitha.png" alt="Admin 4">
+  <div class="card" onclick="openPopup('id_card/id_nitha.jpg')">
+    <img src="chibi_admin/nitha.png" alt="Admin 4">
     <h3>Nitha</h3>
     <p>Notulen</p>
   </div>
 
   <!-- Platform -->
   <h2 class="sub-title">Platform</h2>
-  <div class="card" onclick="openPopup('id_messa.jpg')">
-    <img src="messa.png" alt="Admin 5">
+  <div class="card" onclick="openPopup('id_card/id_messa.jpg')">
+    <img src="chibi_admin/messa.png" alt="Admin 5">
     <h3>Messa</h3>
     <p>Platform (Discord)</p>
   </div>
-  <div class="card" onclick="openPopup('id_patan.jpg')">
-    <img src="tatan.png" alt="Admin 6">
+  <div class="card" onclick="openPopup('id_card/id_patan.jpg')">
+    <img src="chibi_admin/tatan.png" alt="Admin 6">
     <h3>Patan</h3>
     <p>Platform (Website)</p>
   </div>
 
   <!-- Sosial Media -->
   <h2 class="sub-title">Sosial Media</h2>
-  <div class="card" onclick="openPopup('id_nayel.jpg')">
-    <img src="nayla.png" alt="Admin 7">
+  <div class="card" onclick="openPopup('id_card/id_nayel.jpg')">
+    <img src="chibi_admin/nayla.png" alt="Admin 7">
     <h3>Nayla</h3>
     <p>Sosial Media</p>
   </div>
-  <div class="card" onclick="openPopup('id_lena.jpg')">
-    <img src="lena.png" alt="Admin 8">
+  <div class="card" onclick="openPopup('id_card/id_lena.jpg')">
+    <img src="chibi_admin/lena.png" alt="Admin 8">
     <h3>Lena</h3>
     <p>Sosial Media</p>
   </div>
 
   <!-- Keamanan -->
   <h2 class="sub-title">Keamanan</h2>
-  <div class="card" onclick="openPopup('id_rusty.jpg')">
-    <img src="rusty.png" alt="Admin 9">
+  <div class="card" onclick="openPopup('id_card/id_rusty.jpg')">
+    <img src="chibi_admin/rusty.png" alt="Admin 9">
     <h3>Rusty</h3>
     <p>Keamanan</p>
   </div>
-  <div class="card" onclick="openPopup('id_suqun.jpg')">
-    <img src="suqun.png" alt="Admin 10">
+  <div class="card" onclick="openPopup('id_card/id_suqun.jpg')">
+    <img src="chibi_admin/suqun.png" alt="Admin 10">
     <h3>Suqun</h3>
     <p>Keamanan</p>
   </div>
 
   <!-- Desain Grafis -->
   <h2 class="sub-title">Editor Desain Grafis</h2>
-  <div class="card" onclick="openPopup('id_tomat.jpg')">
-    <img src="Tomat.jpg" alt="Admin 11">
-    <h3>Tomat</h3>
-    <p>Editor Desain Grafis</p>
+  <div class="card" onclick="openPopup('id_card/id_tomat.jpg')">
+    <img src="chibi_admin/Tomat.jpg" alt="Admin 11">
+    <h3>Deul</h3>
+    <p>Leader Editor Desain Grafis</p>
   </div>
-  <div class="card" onclick="openPopup('id_aurel.jpg')">
-    <img src="aurel.png" alt="Admin 12">
+  <div class="card" onclick="openPopup('id_card/id_aurel.jpg')">
+    <img src="chibi_admin/aurel.png" alt="Admin 12">
     <h3>Aurel</h3>
     <p>Editor Desain Grafis</p>
   </div>
-  <div class="card" onclick="openPopup('id_jovita.jpg')">
-    <img src="panpan.png" alt="Admin 14">
-    <h3>Jovita</h3>
-    <p>Editor Desain Grafis</p>
-  </div>
-   <div class="card" onclick="openPopup('id_raras.jpg')">
-    <img src="raras.jpg" alt="Admin 19">
+   <div class="card" onclick="openPopup('id_card/id_raras.jpg')">
+    <img src="chibi_admin/raras.jpg" alt="Admin 19">
     <h3>Raras</h3>
     <p>Editor Desain Grafis</p>
   </div>
-   <div class="card" onclick="openPopup('id_hawa.jpg')">
-    <img src="hawa.jpg" alt="Admin 20">
+   <div class="card" onclick="openPopup('id_card/id_hawa.jpg')">
+    <img src="chibi_admin/hawa.jpg" alt="Admin 20">
     <h3>Hawa</h3>
     <p>Editor Desain Grafis</p>
   </div>
-   <div class="card" onclick="openPopup('id_nelvin.jpg')">
-    <img src="nelvin.jpg" alt="Admin 21">
+   <div class="card" onclick="openPopup('id_card/id_nelvin.jpg')">
+    <img src="chibi_admin/nelvin.jpg" alt="Admin 21">
     <h3>Nelvin</h3>
     <p>Editor Desain Grafis</p>
   </div>
 
   <!-- Editor Desain & Video -->
   <h2 class="sub-title">Editor Desain & Video</h2>
-  <div class="card" onclick="openPopup('id_icel.jpg')">
-    <img src="icel.png" alt="Admin 13">
+  <div class="card" onclick="openPopup('id_card/id_icel.jpg')">
+    <img src="chibi_admin/icel.png" alt="Admin 13">
     <h3>Icel</h3>
     <p>Editor Desain & Video</p>
   </div>
@@ -362,23 +366,18 @@
 
   <!-- Editor Video -->
   <h2 class="sub-title">Editor Video</h2>
-  <div class="card" onclick="openPopup('id_romeo.jpg')">
-    <img src="romeo.png" alt="Admin 15">
+  <div class="card" onclick="openPopup('id_card/id_romeo.jpg')">
+    <img src="chibi_admin/romeo.png" alt="Admin 15">
     <h3>Romeo</h3>
     <p>Editor Video</p>
   </div>
-  <div class="card" onclick="openPopup('id_artha.jpg')">
-    <img src="artha.png" alt="Admin 16">
-    <h3>Artha</h3>
-    <p>Editor Video</p>
-  </div>
-  <div class="card" onclick="openPopup('id_pelis.jpg')">
-    <img src="pelis.png" alt="Admin 17">
+  <div class="card" onclick="openPopup('id_card/id_pelis.jpg')">
+    <img src="chibi_admin/pelis.png" alt="Admin 17">
     <h3>Pelis</h3>
     <p>Editor Video</p>
   </div>
-  <div class="card" onclick="openPopup('id_rey.jpg')">
-    <img src="rey.png" alt="Admin 18">
+  <div class="card" onclick="openPopup('id_card/id_rey.jpg')">
+    <img src="chibi_admin/rey.png" alt="Admin 18">
     <h3>Rey</h3>
     <p>Editor Video</p>
   </div>
