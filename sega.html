@@ -8,154 +8,180 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
 
-    body {
-      background: url(blurr.jpg);
-      background-size: cover;
-      color: #fff;
-      min-height: 100vh;
-      padding-top: 80px; /* Header height */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: opacity 0.5s ease;
-    }
+body {
+  background: repeating-linear-gradient(
+    45deg,
+    #000010,
+    #000010 10px,
+    #0a0a1a 10px,
+    #0a0a1a 20px
+  );
+  color: #bfe9ff;
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  image-rendering: pixelated;
+}
 
-    body.fade-out {
-      opacity: 0;
-    }
+body.fade-out {
+  opacity: 0;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #00001a;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: #001133;
+  border-bottom: 4px solid #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
 
-    @keyframes naikTurunHuruf {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+@keyframes naikTurunHuruf {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
 
-    header h1 {
-      font-size: 24px;
-      color: #fff;
-      display: flex;
-      gap: 2px;
-    }
+header h1 {
+  font-size: 14px;
+  color: #00bfff;
+  display: flex;
+  gap: 2px;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #0077ff;
+}
 
-    header h1 span {
-      display: inline-block;
-      animation: naikTurunHuruf 1.5s infinite ease-in-out;
-    }
+header h1 span {
+  display: inline-block;
+  animation: naikTurunHuruf 1.5s infinite ease-in-out;
+}
 
-    header h1 span:nth-child(1) { animation-delay: 0s; }
-    header h1 span:nth-child(2) { animation-delay: 0.1s; }
-    header h1 span:nth-child(3) { animation-delay: 0.2s; }
-    header h1 span:nth-child(4) { animation-delay: 0.3s; }
-    header h1 span:nth-child(5) { animation-delay: 0.4s; }
-    header h1 span:nth-child(6) { animation-delay: 0.5s; }
-    header h1 span:nth-child(7) { animation-delay: 0.6s; }
-    header h1 span:nth-child(8) { animation-delay: 0.7s; }
+nav a {
+  margin-left: 15px;
+  color: #66ccff;
+  text-decoration: none;
+  font-size: 8px;
+  border: 2px solid #0077ff;
+  padding: 6px 10px;
+  background: #000020;
+  box-shadow: 0 0 10px #0077ff;
+  transition: all 0.2s ease;
+}
 
-   nav a {
-      margin-left: 20px;
-      color: #ccc;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
+nav a:hover {
+  background: #0077ff;
+  color: #000;
+  box-shadow: 0 0 20px #00bfff;
+}
 
-    nav a:hover {
-      color: #fff;
-    }
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 40px;
+  background: #001133;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+  padding: 30px;
+  border-radius: 10px;
+}
 
-    .intro {
-      text-align: center;
-      max-width: 600px;
-      margin-bottom: 20px;
-    }
+.intro h2 {
+  font-size: 12px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+  margin-bottom: 15px;
+}
 
-    .intro h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+.intro p {
+  font-size: 8px;
+  color: #66ccff;
+  line-height: 1.8;
+}
 
-    .intro p {
-      font-size: 14px;
-      opacity: 0.9;
-      margin-bottom: 8px;
-    }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  width: 90%;
+  margin-top: 20px;
+}
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      width: 90%;
-    }
+.card {
+  background: #000020;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 15px #0077ff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.12);
-      padding: 20px;
-      text-align: center;
-      border-radius: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00bfff;
+}
 
-    .card:hover {
-      transform: scale(1.07);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      background: rgba(255, 255, 255, 0.25);
-    }
+.card i {
+  font-size: 28px;
+  color: #00bfff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00bfff;
+}
 
-    .card i {
-      font-size: 36px;
-      margin-bottom: 8px;
-      display: block;
-      transition: transform 0.3s;
-    }
+.card div {
+  font-size: 8px;
+  color: #66ccff;
+}
 
-    .card:hover i {
-      transform: rotate(10deg) scale(1.1);
-    }
+.social-icons {
+  text-align: center;
+  margin-top: 40px;
+}
 
-    .social-icons {
-      text-align: center;
-      margin-top: 30px;
-    }
+.social-icons a {
+  margin: 0 8px;
+  font-size: 16px;
+  color: #00bfff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
 
-    .social-icons a {
-      margin: 0 8px;
-      font-size: 26px;
-      color: #fff;
-      transition: transform 0.3s;
-    }
+.social-icons a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #00bfff;
+  transform: scale(1.2);
+}
 
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 8px;
+  color: #66ccff;
+  opacity: 0.9;
+  border-top: 3px solid #00bfff;
+  padding: 20px;
+  box-shadow: 0 -5px 20px #0077ff;
+  background: #001133;
+}
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      opacity: 0.8;
-    }
   </style>
 </head>
 <body>
@@ -166,12 +192,14 @@
     <span>S</span><span>E</span><span>G</span><span>A</span><span>F</span><span>A</span><span>M</span><span>S</span>
   </h1>
     <nav>
-      <a href="segafams.html">Kaciw</a>
-      <a href="sega.html">Segafams</a>
-      <a href="biodata.html">Biodata</a>
-      <a href="galeri.html">Galeri</a>
-      <a href="kontak.html">Kontak</a>
-    </nav>
+    <a href="segafams.html">Kaciw</a>
+    <a href="sega.html">Segafams</a>
+    <a href="biodata.html">Biodata</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="event.html">Event</a>
+    <a href="shop.html">Shop</a>
+  </nav>
   </header>
 
   <div class="intro">
