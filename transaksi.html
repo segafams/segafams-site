@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Halaman Transaksi - Segafams Shop</title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: repeating-linear-gradient(
+    45deg,
+    #000010,
+    #000010 10px,
+    #0a0a1a 10px,
+    #0a0a1a 20px
+  );
+  margin: 0;
+  padding: 0;
+  color: #bfe9ff;
+  image-rendering: pixelated;
+}
+
+header {
+  width: 100%;
+  padding: 25px 50px;
+  background: #001133;
+  border-bottom: 4px solid #00bfff;
+  box-shadow: 0 0 20px #0077ff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #0077ff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #001133;
+  padding: 25px;
+  border-radius: 10px;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 25px #0077ff;
+}
+
+.title {
+  font-size: 12px;
+  margin-bottom: 25px;
+  color: #00bfff;
+  text-align: center;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  color: #bfe9ff;
+  font-size: 8px;
+}
+
+table th, table td {
+  border-bottom: 2px solid #0077ff;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background: #000020;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+.total-bayar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+.btn-bayar {
+  display: inline-block;
+  background: #00bfff;
+  padding: 10px 16px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid #0077ff;
+  font-size: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00bfff;
+  transition: all 0.3s ease;
+}
+
+.btn-bayar:hover {
+  background: #0077ff;
+  color: #fff;
+  box-shadow: 0 0 25px #00bfff;
+}
+
+.btn-back {
+  color: #66ccff;
+  text-decoration: none;
+  font-size: 8px;
+  background: #000020;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 2px solid #0077ff;
+  box-shadow: 0 0 10px #0077ff;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #0077ff;
+  color: #000;
+  box-shadow: 0 0 20px #00bfff;
+}
+
+/* Tombol hapus per item */
+.btn-hapus {
+  background: #ff0044;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 2px solid #ff66aa;
+  cursor: pointer;
+  font-size: 7px;
+  box-shadow: 0 0 10px #ff3388;
+  transition: all 0.3s ease;
+}
+
+.btn-hapus:hover {
+  background: #ff3388;
+  box-shadow: 0 0 20px #ff66aa;
+}
+
+/* Tombol Hapus Semua */
+.btn-hapus-semua {
+  background: #ff0044;
+  padding: 10px 14px;
+  color: #fff;
+  border-radius: 6px;
+  border: 2px solid #ff66aa;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 8px;
+  box-shadow: 0 0 15px #ff3388;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-hapus-semua:hover {
+  background: #ff3388;
+  box-shadow: 0 0 25px #ff66aa;
+}
+
+/* Animasi item hilang */
+.hilang {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: 0.4s;
+}
+
+/* Tombol jumlah */
+.qty-btn {
+  background: #000020;
+  color: #00bfff;
+  border: 2px solid #0077ff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 8px;
+  box-shadow: 0 0 10px #0077ff;
+  transition: all 0.3s ease;
+}
+
+.qty-btn:hover {
+  background: #0077ff;
+  color: #fff;
+  box-shadow: 0 0 20px #00bfff;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="shop.html" class="btn-back">← Kembali</a>
+  <h1>SEGAFAMS - Transaksi</h1>
+</header>
+
+<div class="title">Detail Transaksi Kamu</div>
+
+<table id="tabelTransaksi">
+  <tr>
+    <th>Produk</th>
+    <th>Jumlah</th>
+    <th>Harga</th>
+    <th>Total</th>
+    <th>Aksi</th>
+  </tr>
+</table>
+
+<div class="total">
+  Total Pembayaran: <strong id="totalBayar">Rp 0</strong>
+</div>
+
+<br>
+
+<button class="btn-hapus-semua" onclick="hapusSemua()">Hapus Semua</button>
+<a href="#" class="btn-bayar" onclick="checkoutWA()">Bayar Sekarang</a>
+
+<script>
+window.onload = function() {
+  tampilkanTransaksi();
+};
+
+function tampilkanTransaksi() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let table = document.getElementById("tabelTransaksi");
+  let totalPembayaran = 0;
+
+  // Hapus baris lama (jika reload)
+  table.innerHTML = `
+    <tr>
+      <th>Produk</th>
+      <th>Jumlah</th>
+      <th>Harga</th>
+      <th>Total</th>
+      <th>Aksi</th>
+    </tr>
+  `;
+
+  if (cart.length === 0) {
+    table.innerHTML += `<tr><td colspan='5'>Tidak ada barang di keranjang.</td></tr>`;
+    document.getElementById("totalBayar").innerHTML = "Rp 0";
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    let jumlah = item.quantity ?? 1;
+    let total = item.price * jumlah;
+    totalPembayaran += total;
+
+    table.innerHTML += `
+      <tr id="row-${index}">
+        <td>${item.name}</td>
+        <td>
+        <button onclick="kurangQty(${index})" class="qty-btn">−</button>
+        <span>${jumlah}</span>
+        <button onclick="tambahQty(${index})" class="qty-btn">+</button>
+        </td>
+        <td>Rp ${item.price.toLocaleString()}</td>
+        <td>Rp ${total.toLocaleString()}</td>
+        <td>
+          <button class="btn-hapus" onclick="konfirmasiHapus(${index})">Hapus</button>
+        </td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("totalBayar").innerHTML =
+    "Rp " + totalPembayaran.toLocaleString();
+}
+
+// ⚠️ KONFIRMASI HAPUS SATU ITEM
+function konfirmasiHapus(index) {
+  if (confirm("Yakin ingin menghapus barang ini?")) {
+    hapusBarang(index);
+  }
+}
+
+// 🔴 HAPUS ITEM
+function hapusBarang(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let row = document.getElementById("row-" + index);
+  row.classList.add("hilang");
+
+  setTimeout(() => {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    tampilkanTransaksi();
+  }, 400);
+}
+
+// ⚠️ KONFIRMASI HAPUS SEMUA
+function hapusSemua() {
+  if (confirm("Hapus semua barang di transaksi?")) {
+    localStorage.removeItem("cart");
+    tampilkanTransaksi();
+  }
+}
+
+// 🟢 CHECKOUT WHATSAPP
+function checkoutWA() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (cart.length === 0) {
+    alert("Keranjang kosong!");
+    return;
+  }
+
+  let pesan = "Halo saya ingin memesan:\n\n";
+
+  cart.forEach(item => {
+    let qty = item.quantity ?? 1;
+    let totalItem = item.price * qty;
+
+    pesan += `- ${item.name} (x${qty}) = Rp ${totalItem.toLocaleString()}\n`;
+  });
+
+  let totalBayar = cart.reduce((sum, item) => {
+    let qty = item.quantity ?? 1;
+    return sum + item.price * qty;
+  }, 0);
+
+  pesan += `\nTotal Pembayaran: Rp ${totalBayar.toLocaleString()}`;
+
+  // Tambahan keterangan pembayaran
+  pesan += `\n\n -catatan: Nanti untuk metode pembayarannya bisa dikirim lewat e-wallet atau rekening kita, nomor nya langsung minta pada admin yaa.`;
+
+  let encoded = encodeURIComponent(pesan);
+
+  let nomor = "6285880494629";
+
+  window.open(`https://wa.me/${nomor}?text=${encoded}`, "_blank");
+}
+
+
+
+function tambahQty(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart[index].quantity = (cart[index].quantity || 1) + 1;
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  tampilkanTransaksi();
+}
+
+function kurangQty(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart[index].quantity = (cart[index].quantity || 1) - 1;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  tampilkanTransaksi();
+}
+
+</script>
+
+
+
+
+</body>
+</html>
